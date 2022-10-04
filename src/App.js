@@ -4,9 +4,19 @@ import CurrentPool from "./components/CurrentPool";
 import CompletedPoolsTable from "./components/CompletedPoolsTable";
 import SectionButtons from "./components/SectionButtons";
 import Header from "./components/Header";
+import ToggleButton from "./components/ToggleButton";
 
 const App = (props) => {
+
+  const mainTitle = "Quiniela NAYARIT";
+  const subTitle = "Repechaje"
+
+  document.title = mainTitle + ' - ' + subTitle + ' ⚽';
+
   const price = 30;
+  // const doubleTriple = true;
+  // let countDoubleTriple = 1;
+
   const whatsURL = "https://api.whatsapp.com/send/?";
   const phoneNumber = "5213414392552";
   const UNSELECTED_SIGN = "*";
@@ -14,99 +24,100 @@ const App = (props) => {
     {
       id: 1,
       localValue: false,
-      localTeamIcon: "puebla.jpeg",
-      localTeamName: "Puebla",
+      localTeamIcon: "mineros.png",
+      localTeamName: "Mineros Zac.",
       drawValue: false,
-      visitingTeamIcon: "america.jpeg",
-      visitingTeamName: "America",
+      visitingTeamIcon: "cancunfc.png",
+      visitingTeamName: "Cancún FC",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 2,
-      localValue: "",
-      localTeamIcon: "juarez.jpeg",
-      localTeamName: "Juarez",
-      drawValue: "",
-      visitingTeamIcon: "pumas.jpeg",
-      visitingTeamName: "Pumas",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "milan.png",
+      localTeamName: "Milan",
+      drawValue: false,
+      visitingTeamIcon: "juventus.png",
+      visitingTeamName: "Juventus",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 3,
-      localValue: "",
-      localTeamIcon: "inter.jpeg",
-      localTeamName: "Inter",
-      drawValue: "",
-      visitingTeamIcon: "roma.jpeg",
-      visitingTeamName: "Roma",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "bdortmund.png",
+      localTeamName: "B. Dortmund",
+      drawValue: false,
+      visitingTeamIcon: "bmunich.png",
+      visitingTeamName: "Bayern M.",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 4,
-      localValue: "",
-      localTeamIcon: "san-luis.jpeg",
-      localTeamName: "San Luis",
-      drawValue: "",
-      visitingTeamIcon: "tigres.jpeg",
-      visitingTeamName: "Tigres",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "tigres.jpeg",
+      localTeamName: "Tigres",
+      drawValue: false,
+      visitingTeamIcon: "necaxa.png",
+      visitingTeamName: "Necaxa",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 5,
-      localValue: "",
-      localTeamIcon: "monterrey.jpeg",
-      localTeamName: "Monterrey",
-      drawValue: "",
-      visitingTeamIcon: "pachuca.jpeg",
-      visitingTeamName: "Pachuca",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "cruz-azul.jpeg",
+      localTeamName: "Cruz Azul",
+      drawValue: false,
+      visitingTeamIcon: "leon.jpeg",
+      visitingTeamName: "León",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 6,
-      localValue: "",
-      localTeamIcon: "cruz-azul.jpeg",
-      localTeamName: "Cruz Azul",
-      drawValue: "",
-      visitingTeamIcon: "guadalajara.jpeg",
-      visitingTeamName: "Chivas",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "arsenal.png",
+      localTeamName: "Arsenal",
+      drawValue: false,
+      visitingTeamIcon: "liverpool.png",
+      visitingTeamName: "Liverpool",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 7,
-      localValue: "",
-      localTeamIcon: "manchester-city.jpeg",
-      localTeamName: "M. City",
-      drawValue: "",
-      visitingTeamIcon: "manchester-united.jpeg",
-      visitingTeamName: "M. United",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "toluca.png",
+      localTeamName: "Toluca",
+      drawValue: false,
+      visitingTeamIcon: "juarez.jpeg",
+      visitingTeamName: "Juárez",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 8,
-      localValue: "",
-      localTeamIcon: "santos.jpeg",
-      localTeamName: "Santos",
-      drawValue: "",
-      visitingTeamIcon: "mazatlan.jpeg",
-      visitingTeamName: "Mazatlan",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "realmadrid.png",
+      localTeamName: "Real Madrid",
+      drawValue: false,
+      visitingTeamIcon: "getafe.png",
+      visitingTeamName: "Getafe",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
-    },{
+    },
+    {
       id: 9,
-      localValue: "",
-      localTeamIcon: "leon.jpeg",
-      localTeamName: "Leon",
-      drawValue: "",
-      visitingTeamIcon: "tijuana.jpeg",
-      visitingTeamName: "Tijuana",
-      visitingValue: "",
+      localValue: false,
+      localTeamIcon: "puebla.jpeg",
+      localTeamName: "Puebla",
+      drawValue: false,
+      visitingTeamIcon: "chivas.png",
+      visitingTeamName: "Chivas",
+      visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
   ];
@@ -117,58 +128,70 @@ const App = (props) => {
   const [showAddButton, setShowAddButton] = useState(false);
   const [poolSelection, setPoolSelection] = useState(poolArray);
   const [playerName, setPlayerGame] = useState("");
+  // const [globalCount, setGlobalCount] = useState(0);
+  const [countDoubleTriple, setCountDoubleTriple] = useState(0);
+  const [doubleTriple, setDoubleTriple] = useState(false);
 
   // ToggleChoice
   const toggleChoice = (id, type) => {
-    if (type === "L") {
-      setGame(
-        games.map((game) =>
-          game.id === id
-            ? ((game.localValue = !game.localValue),
-              (game.choice = type),
-              (game.drawValue = false),
-              (game.visitingValue = false),
-              { ...game, choice: type })
-            : game
-        )
-      );
-    } else if (type === "E") {
-      setGame(
-        games.map((game) =>
-          game.id === id
-            ? ((game.drawValue = !game.drawValue),
-              (game.choice = type),
-              (game.localValue = false),
-              (game.visitingValue = false),
-              { ...game, choice: type })
-            : game
-        )
-      );
-    } else if (type === "V") {
-      setGame(
-        games.map((game) =>
-          game.id === id
-            ? ((game.visitingValue = !game.visitingValue),
-              (game.choice = type),
-              (game.drawValue = false),
-              (game.localValue = false),
-              { ...game, choice: type })
-            : game
-        )
-      );
+    switch (type) {
+      case "L":
+        setGame(
+          games.map((game) =>
+            game.id === id && !doubleTriple
+              ? ((game.localValue = !game.localValue),
+                (game.choice = (game.localValue) ? type : UNSELECTED_SIGN),
+                (game.drawValue = false),
+                (game.visitingValue = false),
+                { ...game, choice: (game.localValue) ? type : UNSELECTED_SIGN })
+              : game.id === id && doubleTriple
+              ? ((game.localValue = !game.localValue),
+                (game.choice = getChoices(game)),
+                { ...game, choice: getChoices(game) })
+              : game
+          )
+        );
+        break;
+      case "E":
+        setGame(
+          games.map((game) =>
+            game.id === id && !doubleTriple
+              ? ((game.drawValue = !game.drawValue),
+                (game.choice = (game.drawValue) ? type : UNSELECTED_SIGN),
+                (game.localValue = false),
+                (game.visitingValue = false),
+                { ...game, choice: (game.drawValue) ? type : UNSELECTED_SIGN })
+              : game.id === id && doubleTriple
+              ? ((game.drawValue = !game.drawValue),
+                (game.choice = getChoices(game)),
+                { ...game, choice: getChoices(game) })
+              : game
+          )
+        );
+        break;
+      case "V":
+        setGame(
+          games.map((game) =>
+            game.id === id && !doubleTriple
+              ? ((game.visitingValue = !game.visitingValue),
+                (game.choice = (game.visitingValue) ? type : UNSELECTED_SIGN),
+                (game.drawValue = false),
+                (game.localValue = false),
+                { ...game, choice: (game.visitingValue) ? type : UNSELECTED_SIGN })
+              : game.id === id && doubleTriple
+              ? ((game.visitingValue = !game.visitingValue),
+                (game.choice = getChoices(game)),
+                { ...game, choice: getChoices(game) })
+              : game
+          )
+        );
+        break;
+
+      default:
+        break;
     }
-
-    setGame(
-      games.map((game) =>
-        game.id === id &&
-        !game.localValue &&
-        !game.drawValue &&
-        !game.visitingValue
-          ? { ...game, choice: UNSELECTED_SIGN }
-          : game
-      )
-    );
-
+    
+    // Update the selection string with the the selected choice
     setPoolSelection(
       games.map((game) =>
         game.id === id &&
@@ -179,20 +202,72 @@ const App = (props) => {
           : game.choice
       )
     );
+    // setGame(
+    //   games.map((game) =>
+    //     game.id === id &&
+    //     !game.localValue &&
+    //     !game.drawValue &&
+    //     !game.visitingValue
+    //       ? { ...game, choice: UNSELECTED_SIGN }
+    //       : game
+    //   )
+    // );
+
+    calculateDoubleTriple();
+  };
+  
+
+  const calculateDoubleTriple = () => {
+    let tmp = 1;
+    games.map((game) => {
+      tmp *= game.choice.length;
+      setCountDoubleTriple(tmp);
+      // console.log("choice_lenght: " + game.choice.length);
+      return tmp;
+    });
+    // console.log("COUNT: " + countDoubleTriple);
+  };
+
+  const getChoices = (game) => {
+    let doubleTripleTmpValue = "";
+    if (game.localValue) {
+      doubleTripleTmpValue += "L";
+    }
+    if (game.drawValue) {
+      doubleTripleTmpValue += "E";
+    }
+    if (game.visitingValue) {
+      doubleTripleTmpValue += "V";
+    }
+    if (!game.localValue && !game.drawValue && !game.visitingValue)
+      doubleTripleTmpValue = UNSELECTED_SIGN;
+    return doubleTripleTmpValue;
   };
 
   const getCompletedPools = () => {
-    return completedPools.length;
+    // return completedPools.length;
+    return completedPools.reduce((psum, pool) => psum + pool.count, 0);
   };
 
   // Add Pool
   const addPool = (pool) => {
+    
+    // setTimeout(()=> {
+      // console.log("DOUBLE_TRIPLE: " + countDoubleTriple);
+    // },2000);
+
     if (!playerName || playerName === "") {
-      alert("Necesario ingresar un nombre");
-      return;
+      // alert("Necesario ingresar un nombre");
+      let p = {b:false, data: 'Nombre requerido'};
+      return new Promise((resolve, reject) => {
+        reject(p)
+      })
     } else if (pool.includes(UNSELECTED_SIGN)) {
-      alert("Necesario llenar todos los partidos");
-      return;
+      // alert("Necesario llenar todos los partidos");
+      let p =  {b:false, data: 'Llenar todos los partidos'};
+      return new Promise((resolve, reject) => {
+        reject(p)
+      })
     }
     const id = Math.floor(Math.random() * 10000) + 1;
     const txtPool = pool.join("|");
@@ -200,10 +275,15 @@ const App = (props) => {
       id: id,
       playerName: playerName,
       poolStr: txtPool,
+      count: countDoubleTriple,
     };
 
     cleanFields();
     setCompletedPools([...completedPools, newPool]);
+    return new Promise((resolve, reject) => {
+      resolve({b:true, data: 'Quiniela agregada correctamente!'})
+    });
+    // setCountDoubleTriple(1)
   };
 
 
@@ -216,11 +296,13 @@ const App = (props) => {
     setCompletedPools(completedPools.filter((pool) => pool.id !== id));
   };
 
-  // Clean All Fields 
+  // Clean All Fields
   const cleanAll = () => {
     setCompletedPools([]);
     setPoolSelection(poolArray);
     setPlayerGame("");
+    setCountDoubleTriple(0);
+    setDoubleTriple(false);
     setGame(
       games.map((game) => ({
         ...game,
@@ -234,6 +316,8 @@ const App = (props) => {
 
   const cleanFields = () => {
     setPoolSelection(poolArray);
+    setCountDoubleTriple(0);
+    // setDoubleTriple(false);
     setGame(
       games.map((game) => ({
         ...game,
@@ -247,16 +331,22 @@ const App = (props) => {
 
   // Send Pools, open whatsap API with pre-filled info
   const sendPools = () => {
-    if(completedPools.length === 0){
-      alert("No tiene quinielas para enviar");
-      return;
+    if (completedPools.length === 0) {
+      return new Promise((resolve, reject) => {
+      //  console.log("Zero pools");
+        reject({b:false, data: "No tiene quinielas para enviar"});
+      });
     }
-    var poolsMsg = "";
+    var poolsMsg = '';
     completedPools.map(
-      (p) =>
-        (poolsMsg +=
-          p.poolStr.replaceAll("|", "++") + "  " + p.playerName + "\r\n")
+      (p) => {
+        (poolsMsg += p.poolStr.replaceAll('|', '++') + ' ' + p.playerName);
+        (poolsMsg += doubleTriple && p.count > 1 ? '  (' + p.count + ')' : '');
+        (poolsMsg += '\r\n');
+        return poolsMsg;
+      }
     );
+    poolsMsg += 'Total: $' + price * getCompletedPools() + '\r\n';
     const urlEncodedMsg =
       whatsURL +
       encodeURI(
@@ -267,23 +357,35 @@ const App = (props) => {
           "&type=phone_number&app_absent=0"
       );
 
-    console.log(urlEncodedMsg);
-    window.location.href = urlEncodedMsg;
+    return new Promise((resolve, reject) => {
+      resolve({b: true, data: urlEncodedMsg});
+    });
+
+    // console.log(urlEncodedMsg);
+    // window.location.href = urlEncodedMsg;
     // window.location.replace(urlEncodedMsg);
   };
+
+  const updateDoubleTriple = (value) => {
+    // console.log("UPDATE DOUBLES_TRIPLES: " + value);
+    setDoubleTriple(value);
+    if(!value) 
+      cleanFields();
+  }
 
   useEffect(() => {
     setPoolSelection(poolSelection);
     setPlayerGame(playerName);
     setShowAddButton(!poolSelection.includes(UNSELECTED_SIGN));
     setCompletedPools(completedPools);
-  }, [poolSelection, playerName, completedPools]);
+    setDoubleTriple(doubleTriple);
+  }, [poolSelection, playerName, completedPools, countDoubleTriple, doubleTriple]);
 
   return (
-    <div>
-      <Header title="Quiniela NAYARIT" subtitle="JORNADA #17" />
+    <div className="wrapper">
+      <Header title={mainTitle} subtitle={subTitle} />
       <Table onToggle={toggleChoice} games={games} />
-      <CurrentPool poolText={poolSelection} />
+      <CurrentPool poolText={poolSelection} count={countDoubleTriple} />
       <SectionButtons
         addPool={addPool}
         pool={poolSelection}
@@ -295,8 +397,12 @@ const App = (props) => {
         onSend={sendPools}
         value={playerName}
       />
-      <div className="container form-control" style={{ textAlign: "right", display:"inline-flex"}}>
-          <b>Total: $ {price * completedPools.length}</b>
+      <div
+        className="container totales">
+        <b style={{  fontSize:"larger" }}>Total: $ {price * getCompletedPools()}</b><br />
+        <span style={{ }}>{ getCompletedPools() } Quiniela(s)</span>
+          <ToggleButton label="Dobles / Triples " onChanged={ updateDoubleTriple }
+          onChangeSet={doubleTriple} />
       </div>
 
       {completedPools != null && completedPools.length > 0 ? (

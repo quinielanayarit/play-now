@@ -8,6 +8,10 @@
   /* padding-top: 0.5em; */
 }
 
+.wrapper {
+  margin-bottom: 5em;
+}
+
 body {
   margin: auto;
   /* scroll-behavior: smooth; */
@@ -31,7 +35,7 @@ body {
   width: 100%;
   margin: 0 auto;
   display: table;
-  padding: 0 0 .1em 0;
+  padding: 0 0 0.1em 0;
   border-radius: 1em;
 }
 
@@ -42,7 +46,7 @@ body {
   /* min-height: 300px;  */
   border: 1px solid steelblue;
   /* padding: 1px; */
-  border-radius: .5em;
+  border-radius: 0.5em;
   /* border: none; */
   /* padding-top: 2.5em; */
   /* margin-top: 1em; */
@@ -50,7 +54,19 @@ body {
 }
 
 .poolSelection {
+  width: 100%;
   padding: 1em;
+  display: grid;
+  /* align-items: center; */
+}
+
+.poolSelection h1 {
+  font-size: 3em/*5vh;*/
+}
+
+.poolSelection span {
+  width: 100%;
+  text-align: center;
 }
 
 .btn {
@@ -80,14 +96,13 @@ body {
   width: 100%;
 }
 
-.disable{
+.disable {
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(186, 184, 184);
 }
 
 table {
-
   width: 100%;
   height: 1px;
 
@@ -97,7 +112,8 @@ table {
   border-radius: 1em;
 }
 
-.choice-field {
+.choice-field,
+.choice-field:active {
   /* background-color: red; */
   display: block;
   padding: auto;
@@ -109,7 +125,7 @@ table {
 }
 
 .selected {
-  background-color: red;
+  background-color: darkred;
 }
 
 .choice-field:hover {
@@ -143,14 +159,21 @@ table tr:first-child th:last-child {
   border-top-right-radius: 1em;
 }
 
-
 table tr:last-child td:last-child {
   /* border: 2px solid green; */
   border-bottom-right-radius: 1em;
 }
 
+table td img {
+  border-radius: 50%;
+  border: solid 2px #003c58;
+  object-fit: cover;
+  width: 5vh;
+  height: 5vh;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 5vh; /*em*/
   padding: 0;
   text-align: center;
   color: #003c58;
@@ -182,7 +205,6 @@ h2 {
   align-items: center;
   margin-bottom: 5px;
   border-radius: 1em;
-
 
   background-color: #003c58;
   /* align-content: center; */
@@ -223,7 +245,7 @@ h2 {
   background: #e2dedede;
   margin-top: 5px;
   padding: 1px 20px;
-  border-radius: .5em;
+  border-radius: 0.5em;
   /* width: 100%; */
   /* cursor: pointer; */
 }
@@ -234,6 +256,8 @@ h2 {
 
 .task h3 {
   display: flex;
+  /* font-size: 1em; */
+  /* font-size: 3.5vw; */
   align-items: center;
   justify-content: space-between;
 }
@@ -301,7 +325,6 @@ footer {
   transform: rotate(20deg);
 }
 
-
 img {
   -webkit-user-drag: none;
   user-select: none;
@@ -309,7 +332,7 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
   pointer-events: none;
-} 
+}
 /*
 .bplanet {
   background-image: url("imgs/IMG.PNG");
@@ -366,3 +389,320 @@ h1 {
   animation-iteration-count: infinite;
   font-size: 45px;
 } */
+
+.toggle-switch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+}
+.checkbox {
+  display: none;
+}
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+}
+.inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.inner:before,
+.inner:after {
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.inner:before {
+  content: "✔";
+  padding-left: 10px;
+  background-color: #060;
+  color: #fff;
+}
+.inner:after {
+  content: "✖";
+  padding-right: 10px;
+  background-color: #bbb;
+  color: #fff;
+  text-align: right;
+}
+.switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.checkbox:checked + .label .inner {
+  margin-left: 0;
+}
+.checkbox:checked + .label .switch {
+  right: 0px;
+}
+
+.name-double-triple {
+  color: #666;
+}
+
+.totales {
+  display: flex;
+  height: 10vh;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  justify-content: space-between;
+  text-align: center;
+}
+#clean-btn {
+  background-color: #4f030c;
+  color: white;
+  font-size: larger;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  /* transition: background-color 250ms ease-out; */
+}
+
+@keyframes rippleEffect {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: rotate(5deg) translate(20px, -50px);
+  }
+  to {
+    transform: scale(0.9) rotate(10deg) translate(50px, -80px);
+    opacity: 0;
+  }
+}
+
+
+@keyframes bouncev {
+  50% {
+    transform: rotate(90deg) translate(0px, -30px);
+    /* transform:   scale(.1,.9); */
+  }
+  80% {
+    transform: scale(.1,.9);
+    opacity: 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0) 0%,
+      #fff 0%,
+      #fff 100%
+    );
+  }
+  25% {
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.3) 24%,
+      #fff 25%,
+      #fff 100%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.5) 49%,
+      #fff 50%,
+      #fff 100%
+    );
+  }
+  75% {
+    background: radial-gradient(
+      circle at center,
+      rgba(7, 7, 7, 0.8) 74%,
+      #fff 75%,
+      #fff 100%
+    );
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(
+      circle at center,
+      rgb(1, 1, 1) 99%,
+      #fff 100%,
+      #fff 100%
+    );
+  }
+}
+
+#2clean-btn:focus:active {
+  /* background-color: #ffc107; */
+  /* animation: gradient 100ms; */
+  /* animation: press 1.2s 1 linear; */
+  /* animation: bounce .2s 1 linear; */
+  box-shadow: none;
+  /* stroke: #003c58; */
+  /* transform: scale(0); */
+  /* transition: transform .3s ease-in; */
+  animation: gradient 200ms;
+
+  /* transform: translate(-50%,-50%); */
+  /* animation: rippleEffect 1s linear infinite; */
+  /* mix-blend-mode: difference; */
+  /* background: radial-gradient(
+    circle at center,
+    white 20%,
+    white 30%,
+    #000 100%
+  );
+  transform: scale(2.0); */
+}
+
+@keyframes shake-h {
+  0% {
+    transform: translateX(20px);
+  }
+  20% {
+    transform: translateX(40px);
+  }
+  40% {
+    transform: translateX(60px);
+  }
+  60% {
+    transform: translateX(80px);
+  }
+  80% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  /* 100% {
+    transform: rotate(-1deg);
+  } */
+}
+
+@keyframes denied {
+  0% {
+    transform: translateX(10px);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+
+.animation-btn {
+  animation: shake-h 0.9s 1 linear;
+  /* animation: gradient 300ms; */
+  /* animation: press .5s linear; */
+}
+
+.animation-denied {
+  animation: denied 0.6s 1 linear;
+}
+
+.animation-btn-add {
+  animation: press 0.9s linear;
+}
+
+.animation-btn-add-icon {
+  animation: bounce .6s 1 ease-out;
+}
+
+.bounce-btn{
+  animation: bouncev .9s 1 linear;
+}
+
+button svg {
+  pointer-events: none;
+}
+
+#add-icon {
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#confirm-add-icon {
+  color: green;
+  cursor: pointer;
+  margin-left: 10px;
+  /* size: 25px; */
+  /* animation: shake .9s 1 linear; */
+  /* animation: shake 0.9s 1 linear; */
+  /* animation: bounce 0.2s 1 linear; */
+  /* display: none; */
+  /* visibility: hidden; */
+}
+
+#send-btn {
+  /* animation: shake-h 0.8s 1 linear; */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) and (-webkit-min-device-pixel-ratio: 2) {
+  .totales {
+    display: block;
+    height: 18vh;
+  }
+
+  .task h3 {
+    font-size: smaller /*3.5vw;*/
+  }
+}

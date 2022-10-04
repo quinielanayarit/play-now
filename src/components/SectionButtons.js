@@ -12,7 +12,7 @@ const SectionButtons = ({
   onClean,
   onSend,
   completedPools,
-  value,
+  value
 }) => {
   return (
     <div

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 const Header = ({ title, subtitle }) => {
   return (
     <header className='header'>
-      <div className='' style={{ marginLeft:"1em", width:"10%" }}>
-        <img src="images/logo.png" alt="logo" style={{ width:"100px"}} />
+      <div className='' style={{ marginLeft:"1em", objectFit: "cover", width:"10%" }}>
+        <img src="images/logo.png" alt="logo" style={{ width:"5em"}} />
       </div>
       <div style={{ width:"80%" }}>
         <h1 style={{ color:"#DC9D00"}} >{title}</h1>
