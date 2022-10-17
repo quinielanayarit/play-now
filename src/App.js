@@ -9,8 +9,8 @@ import ToggleButton from "./components/ToggleButton";
 const App = (props) => {
 
   const mainTitle = "Quiniela NAYARIT";
-  const subTitle = "Liguilla Cierre"
-  const noticeCloseDate = "Cierre: Viernes 14 19:30 HRS"
+  const subTitle = "Semifinales"
+  const noticeCloseDate = "Cierre: Viernes 21 19:30 HRS"
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
@@ -25,49 +25,60 @@ const App = (props) => {
     {
       id: 1,
       localValue: false,
-      localTeamIcon: "athleticb.jpeg",
-      localTeamName: "Athletic B.",
+      localTeamIcon: "CHELSEA.PNG",
+      localTeamName: "chelsea",
       drawValue: false,
-      visitingTeamIcon: "atletico.jpeg",
-      visitingTeamName: "Atlético M.",
+      visitingTeamIcon: "munited.png",
+      visitingTeamName: "M. United",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 2,
       localValue: false,
-      localTeamIcon: "monterrey.jpeg",
-      localTeamName: "Monterrey",
+      localTeamIcon: "realmadrid.png",
+      localTeamName: "real madrid",
       drawValue: false,
-      visitingTeamIcon: "cruz-azul.jpeg",
-      visitingTeamName: "Cruz Azul",
+      visitingTeamIcon: "sevilla.png",
+      visitingTeamName: "sevilla",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 3,
       localValue: false,
-      localTeamIcon: "america.jpeg",
-      localTeamName: "America",
+      localTeamIcon: "america.png",
+      localTeamName: "america",
       drawValue: false,
-      visitingTeamIcon: "puebla.jpeg",
-      visitingTeamName: "Puebla",
+      visitingTeamIcon: "toluca.png",
+      visitingTeamName: "toluca",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 4,
       localValue: false,
-      localTeamIcon: "dorados.jpeg",
-      localTeamName: "Dorados",
+      localTeamIcon: "barcelona.png",
+      localTeamName: "barcelona",
       drawValue: false,
-      visitingTeamIcon: "tapatio.jpeg",
-      visitingTeamName: "Tapatío",
+      visitingTeamIcon: "athleticb.png",
+      visitingTeamName: "athletic b.",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 5,
+      localValue: false,
+      localTeamIcon: "mty.png",
+      localTeamName: "monterrey",
+      drawValue: false,
+      visitingTeamIcon: "pachuca.png",
+      visitingTeamName: "pachuca",
+      visitingValue: false,
+      choice: UNSELECTED_SIGN,
+    },
+    {
+      id: 6,
       localValue: false,
       localTeamIcon: "realmadrid.png",
       localTeamName: "Real Madrid",
@@ -78,7 +89,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
     {
-      id: 6,
+      id: 7,
       localValue: false,
       localTeamIcon: "liverpool.png",
       localTeamName: "Liverpool",
@@ -89,7 +100,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
     {
-      id: 7,
+      id: 8,
       localValue: false,
       localTeamIcon: "bayernmunchen.jpeg",
       localTeamName: "Bayern M.",
@@ -100,7 +111,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
     {
-      id: 8,
+      id: 9,
       localValue: false,
       localTeamIcon: "santos.jpeg",
       localTeamName: "Santos",
@@ -110,17 +121,7 @@ const App = (props) => {
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
-    {
-      id: 9,
-      localValue: false,
-      localTeamIcon: "pachuca.jpeg",
-      localTeamName: "Pachuca",
-      drawValue: false,
-      visitingTeamIcon: "tigres.jpeg",
-      visitingTeamName: "Tigres",
-      visitingValue: false,
-      choice: UNSELECTED_SIGN,
-    },
+   
   ];
   const [games, setGame] = useState(data);
   const poolSize = games.length;
