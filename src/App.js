@@ -9,8 +9,8 @@ import ToggleButton from "./components/ToggleButton";
 const App = (props) => {
 
   const mainTitle = "Quiniela NAYARIT";
-  const subTitle = "Semifinales"
-  const noticeCloseDate = "Cierre: Viernes 21 19:30 HRS"
+  const subTitle = "Final MX"
+  const noticeCloseDate = "Cierre: Viernes 28 19:30 HRS"
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
