@@ -7,14 +7,13 @@ import Header from "./components/Header";
 import ToggleButton from "./components/ToggleButton";
 
 const App = (props) => {
-
-  const mainTitle = "Quiniela NAYARIT";
-  const subTitle = "FINAL DE LIGAS"
-  const noticeCloseDate = "Cierre: Viernes 11 de Noviembre 20:30 HRS"
+  const mainTitle = "QUINIELA NAYARIT";
+  const subTitle = "MUNDIAL 1.1"
+  const noticeCloseDate = "Cierre: Sábado 19 de Noviembre 19:30 HRS"
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
-  const price = 30;
+  const price = 20;
   // const doubleTriple = true;
   // let countDoubleTriple = 1;
 
@@ -25,99 +24,99 @@ const App = (props) => {
     {
       id: 1,
       localValue: false,
-      localTeamIcon: "newcastle.png",
-      localTeamName: "newcastle",
+      localTeamIcon: "qat.png",
+      localTeamName: "qatar",
       drawValue: false,
-      visitingTeamIcon: "chelsea.png",
-      visitingTeamName: "chelsea",
+      visitingTeamIcon: "ecu.png",
+      visitingTeamName: "ecuador",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
       {
       id: 2,
       localValue: false,
-      localTeamIcon: "psv.png",
-      localTeamName: "psv eindhoven",
+      localTeamIcon: "usa.png",
+      localTeamName: "estados unidos",
       drawValue: false,
-      visitingTeamIcon: "az.png",
-      visitingTeamName: "az alkmaar",
+      visitingTeamIcon: "wal.png",
+      visitingTeamName: "gales",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
         {
       id: 3,
       localValue: false,
-      localTeamIcon: "celaya.png",
-      localTeamName: "celaya",
+      localTeamIcon: "arg.png",
+      localTeamName: "argentina",
       drawValue: false,
-      visitingTeamIcon: "atlante.png",
-      visitingTeamName: "atlante",
+      visitingTeamIcon: "ksa.png",
+      visitingTeamName: "arabia saudita",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 4,
       localValue: false,
-      localTeamIcon: "friburgo.png",
-      localTeamName: "friburgo",
+      localTeamIcon: "den.png",
+      localTeamName: "dinamarca",
       drawValue: false,
-      visitingTeamIcon: "unionberlin.png",
-      visitingTeamName: "unión berlín",
+      visitingTeamIcon: "tun.png",
+      visitingTeamName: "túnez",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 5,
       localValue: false,
-      localTeamIcon: "fulham.png",
-      localTeamName: "fulham",
+      localTeamIcon: "mex.png",
+      localTeamName: "méxico",
       drawValue: false,
-      visitingTeamIcon: "munited.png",
-      visitingTeamName: "manchester united",
+      visitingTeamIcon: "pol.png",
+      visitingTeamName: "polonia",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 6,
       localValue: false,
-      localTeamIcon: "juventus.png",
-      localTeamName: "juventus",
+      localTeamIcon: "fra.png",
+      localTeamName: "francia",
       drawValue: false,
-      visitingTeamIcon: "lazio.png",
-      visitingTeamName: "lazio",
+      visitingTeamIcon: "aus.png",
+      visitingTeamName: "australia",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
         {
       id: 7,
       localValue: false,
-      localTeamIcon: "monaco.png",
-      localTeamName: "mónaco",
+      localTeamIcon: "ger.png",
+      localTeamName: "alemania",
       drawValue: false,
-      visitingTeamIcon: "marsella.png",
-      visitingTeamName: "marsella",
+      visitingTeamIcon: "jpn.png",
+      visitingTeamName: "japón",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 8,
       localValue: false,
-      localTeamIcon: "river.png",
-      localTeamName: "river plate",
+      localTeamIcon: "esp.png",
+      localTeamName: "España",
       drawValue: false,
-      visitingTeamIcon: "betis.png",
-      visitingTeamName: "real betis",
+      visitingTeamIcon: "crc.png",
+      visitingTeamName: "costa rica",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 9,
       localValue: false,
-      localTeamIcon: "tigres.png",
-      localTeamName: "tigres femenil",
+      localTeamIcon: "bel.png",
+      localTeamName: "belgica",
       drawValue: false,
-      visitingTeamIcon: "america.png",
-      visitingTeamName: "américa femenil",
+      visitingTeamIcon: "can.png",
+      visitingTeamName: "canadá",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },   
@@ -258,13 +257,13 @@ const App = (props) => {
     // },2000);
 
     if (!playerName || playerName === "") {
-      // alert("Necesario ingresar un nombre");
+      // alert("Es necesario ingresar un nombre");
       let p = {b:false, data: 'Nombre requerido'};
       return new Promise((resolve, reject) => {
         reject(p)
       })
     } else if (pool.includes(UNSELECTED_SIGN)) {
-      // alert("Necesario llenar todos los partidos");
+      // alert("Es necesario llenar todos los partidos");
       let p =  {b:false, data: 'Llenar todos los partidos'};
       return new Promise((resolve, reject) => {
         reject(p)
