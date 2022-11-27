@@ -38,13 +38,24 @@ const App = (props) => {
       localTeamIcon: "pol.png",
       localTeamName: "polonia",
       drawValue: false,
-      visitingTeamIcon: "ksa.png",
-      visitingTeamName: "arabia saudita",
+      visitingTeamIcon: "arg.png",
+      visitingTeamName: "argentina",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
-        {
+    {
       id: 3,
+      localValue: false,
+      localTeamIcon: "ksa.png",
+      localTeamName: "arabia saudita",
+      drawValue: false,
+      visitingTeamIcon: "mex.png",
+      visitingTeamName: "méxico",
+      visitingValue: false,
+      choice: UNSELECTED_SIGN,
+    }, 
+        {
+      id: 4,
       localValue: false,
       localTeamIcon: "cro.png",
       localTeamName: "croacia",
@@ -55,7 +66,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
     {
-      id: 4,
+      id: 5,
       localValue: false,
       localTeamIcon: "can.png",
       localTeamName: "canadá",
@@ -66,7 +77,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
     {
-      id: 5,
+      id: 6,
       localValue: false,
       localTeamIcon: "jpn.png",
       localTeamName: "japón",
@@ -77,7 +88,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
     {
-      id: 6,
+      id: 7,
       localValue: false,
       localTeamIcon: "crc.png",
       localTeamName: "costa rica",
@@ -88,7 +99,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
         {
-      id: 7,
+      id: 8,
       localValue: false,
       localTeamIcon: "kor.png",
       localTeamName: "corea del sur",
@@ -99,7 +110,7 @@ const App = (props) => {
       choice: UNSELECTED_SIGN,
     },
     {
-      id: 8,
+      id: 9,
       localValue: false,
       localTeamIcon: "srb.png",
       localTeamName: "serbia",
@@ -109,17 +120,7 @@ const App = (props) => {
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
-    {
-      id: 9,
-      localValue: false,
-      localTeamIcon: "por.png",
-      localTeamName: "portugal",
-      drawValue: false,
-      visitingTeamIcon: "uru.png",
-      visitingTeamName: "uruguay",
-      visitingValue: false,
-      choice: UNSELECTED_SIGN,
-    },   
+      
   ];
   const [games, setGame] = useState(data);
   const poolSize = games.length;
