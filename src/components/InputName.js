@@ -1,7 +1,7 @@
 import { useState } from "react";
 const InputName = ({ onChangeName, value="" }) => {
   const [text, setText] = useState(value);
-
+  
   const changeText = (text) => {
     onChangeName(text);
     setText(text);
