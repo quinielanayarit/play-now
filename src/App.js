@@ -13,7 +13,7 @@ const App = (props) => {
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
-  const price = 30;
+  const price = 0;
   // const doubleTriple = true;
   // let countDoubleTriple = 1;
 
@@ -47,7 +47,7 @@ const App = (props) => {
       id: 3,
       localValue: false,
       localTeamIcon: "america.png",
-      localTeamName: "aamerica",
+      localTeamName: "america",
       drawValue: false,
       visitingTeamIcon: "queretaro.png",
       visitingTeamName: "querétaro",
