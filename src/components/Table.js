@@ -105,7 +105,7 @@ const Table = ({ games, onToggle, note }) => {
 
 
         </tbody>
-        <tfoot>
+        {/* <tfoot>
           <tr>
             <td colSpan={7}>
               <div className="container note">
@@ -115,7 +115,7 @@ const Table = ({ games, onToggle, note }) => {
             </div>
             </td>
           </tr>
-        </tfoot>
+        </tfoot> */}
       </table>
     </div>
   );
