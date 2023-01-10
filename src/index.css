@@ -134,9 +134,7 @@ table {
   background-color: yellow;
 }
 
-tr,
-th,
-td {
+tr {
   border-bottom: 2px solid black;
   /* border-collapse: collapse; */
   background-color: #e8e8e8;
@@ -694,6 +692,19 @@ button svg {
 
 #send-btn {
   /* animation: shake-h 0.8s 1 linear; */
+}
+
+.extra-game {
+  background-color: tomato;
+}
+
+.note {
+  display: contents;
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: .3vh;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 740px) and (-webkit-min-device-pixel-ratio: 2) {

@@ -10,6 +10,7 @@ const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
   const subTitle = "MUNDIAL 1.3"
   const noticeCloseDate = "Cierre: Miércoles 30 de Noviembre 22:30 HRS"
+  const noteExtraGames = "Sera considerado en caso de suspencion de partido";
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
@@ -111,6 +112,7 @@ const App = (props) => {
     },
     {
       id: 9,
+      type: "extra",
       localValue: false,
       localTeamIcon: "srb.png",
       localTeamName: "serbia",
@@ -120,10 +122,22 @@ const App = (props) => {
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
+    {
+      id: 10,
+      type: "extra",
+      localValue: false,
+      localTeamIcon: "srb.png",
+      localTeamName: "NONE",
+      drawValue: false,
+      visitingTeamIcon: "sui.png",
+      visitingTeamName: "suiza",
+      visitingValue: false,
+      choice: UNSELECTED_SIGN,
+    },
       
   ];
   const [games, setGame] = useState(data);
-  const poolSize = games.length;
+  const poolSize = games.filter((game) => game.id !== undefined).length;//games.length;
   const poolArray = Array(poolSize).fill(UNSELECTED_SIGN);
   const [completedPools, setCompletedPools] = useState([]);
   const [showAddButton, setShowAddButton] = useState(false);
@@ -198,11 +212,11 @@ const App = (props) => {
         game.id === id &&
         !game.localValue &&
         !game.drawValue &&
-        !game.visitingValue
+        !game.visitingValue 
           ? (game.choice = UNSELECTED_SIGN)
           : game.choice
       )
-    );
+      );
     // setGame(
     //   games.map((game) =>
     //     game.id === id &&
@@ -385,7 +399,7 @@ const App = (props) => {
   return (
     <div className="wrapper">
       <Header title={mainTitle} subtitle={subTitle} notice={noticeCloseDate} />
-      <Table onToggle={toggleChoice} games={games} />
+      <Table onToggle={toggleChoice} games={games} note={noteExtraGames} />
       <CurrentPool poolText={poolSelection} count={countDoubleTriple} />
       <SectionButtons
         addPool={addPool}
