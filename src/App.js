@@ -14,7 +14,7 @@ const App = (props) => {
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
-  const price = 20;
+  const price = 30;
   // const doubleTriple = true;
   // let countDoubleTriple = 1;
 
