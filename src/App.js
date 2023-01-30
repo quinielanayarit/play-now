@@ -10,7 +10,7 @@ const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
   const subTitle = "Liga MX J5";
   const noticeCloseDate = "Cierre: viernes 3 de Febrero 2:30 PM";
-  const noteExtraGames = "Partido extra en caso de alguna suspensión";
+  const noteExtraGames = "Partido extra en caso de desempate si hay 6 o más ganadores o si existe alguna suspensión";
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
