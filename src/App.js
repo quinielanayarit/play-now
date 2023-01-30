@@ -128,7 +128,7 @@ const App = (props) => {
       localTeamIcon: "barcelona.png",
       localTeamName: "barcelona",
       drawValue: false,
-      visitingTeamIcon: "sevila.png",
+      visitingTeamIcon: "sevilla.png",
       visitingTeamName: "sevilla",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
