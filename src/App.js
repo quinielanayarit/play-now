@@ -8,13 +8,12 @@ import ToggleButton from "./components/ToggleButton";
 
 const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
-  const subTitle = "Liga MX J4";
-  const noticeCloseDate = "Cierre: viernes 3 de Febrero 14:30 HRS";
-  const noteExtraGames = "Partido extra en caso de superar 5 ganadores o de alguna suspensión";
+  const subTitle = "MUNDIAL 1.3"
+  const noticeCloseDate = "Cierre: Miércoles 30 de Noviembre 22:30 HRS"
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
-  const price = 30;
+  const price = 20;
   // const doubleTriple = true;
   // let countDoubleTriple = 1;
 
@@ -25,117 +24,106 @@ const App = (props) => {
     {
       id: 1,
       localValue: false,
-      localTeamIcon: "necaxa.png",
-      localTeamName: "necaxa",
+      localTeamIcon: "aus.png",
+      localTeamName: "australia",
       drawValue: false,
-      visitingTeamIcon: "xolos.png",
-      visitingTeamName: "tijuana",
+      visitingTeamIcon: "den.png",
+      visitingTeamName: "dinamarca",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
       {
       id: 2,
       localValue: false,
-      localTeamIcon: "mazatlan.png",
-      localTeamName: "mazatlán",
+      localTeamIcon: "pol.png",
+      localTeamName: "polonia",
       drawValue: false,
-      visitingTeamIcon: "juarez.png",
-      visitingTeamName: "juárez",
-      visitingValue: false,
-      choice: UNSELECTED_SIGN,
-    },
-        {
-      id: 3,
-      localValue: false,
-      localTeamIcon: "leon.png",
-      localTeamName: "león",
-      drawValue: false,
-      visitingTeamIcon: "pachuca.png",
-      visitingTeamName: "pachuca",
+      visitingTeamIcon: "arg.png",
+      visitingTeamName: "argentina",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
+      id: 3,
+      localValue: false,
+      localTeamIcon: "ksa.png",
+      localTeamName: "arabia saudita",
+      drawValue: false,
+      visitingTeamIcon: "mex.png",
+      visitingTeamName: "méxico",
+      visitingValue: false,
+      choice: UNSELECTED_SIGN,
+    }, 
+        {
       id: 4,
       localValue: false,
-      localTeamIcon: "cruzazul.png",
-      localTeamName: "cruz azul",
+      localTeamIcon: "cro.png",
+      localTeamName: "croacia",
       drawValue: false,
-      visitingTeamIcon: "tigres.png",
-      visitingTeamName: "tigres",
+      visitingTeamIcon: "bel.png",
+      visitingTeamName: "belgica",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 5,
       localValue: false,
-      localTeamIcon: "santos.png",
-      localTeamName: "santos",
+      localTeamIcon: "can.png",
+      localTeamName: "canadá",
       drawValue: false,
-      visitingTeamIcon: "america.png",
-      visitingTeamName: "america",
+      visitingTeamIcon: "mar.png",
+      visitingTeamName: "marruecos",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 6,
       localValue: false,
-      localTeamIcon: "pumas.png",
-      localTeamName: "pumas",
+      localTeamIcon: "jpn.png",
+      localTeamName: "japón",
       drawValue: false,
-      visitingTeamIcon: "atlas.png",
-      visitingTeamName: "atlas",
+      visitingTeamIcon: "esp.png",
+      visitingTeamName: "españa",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 7,
       localValue: false,
-      localTeamIcon: "inter.png",
-      localTeamName: "inter",
+      localTeamIcon: "crc.png",
+      localTeamName: "costa rica",
       drawValue: false,
-      visitingTeamIcon: "milan.png",
-      visitingTeamName: "milan",
+      visitingTeamIcon: "ger.png",
+      visitingTeamName: "alemania",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
-    {
+        {
       id: 8,
       localValue: false,
-      localTeamIcon: "chivas.png",
-      localTeamName: "chivas",
+      localTeamIcon: "kor.png",
+      localTeamName: "corea del sur",
       drawValue: false,
-      visitingTeamIcon: "queretaro.png",
-      visitingTeamName: "querétaro",
+      visitingTeamIcon: "por.png",
+      visitingTeamName: "portugal",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 9,
       localValue: false,
-      localTeamIcon: "mty.png",
-      localTeamName: "monterrey",
+      localTeamIcon: "srb.png",
+      localTeamName: "serbia",
       drawValue: false,
-      visitingTeamIcon: "toluca.png",
-      visitingTeamName: "toluca",
+      visitingTeamIcon: "sui.png",
+      visitingTeamName: "suiza",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
-    },   
-    {
-      id: 10,
-      type: "extra",
-      localValue: false,
-      localTeamIcon: "barcelona.png",
-      localTeamName: "barcelona",
-      drawValue: false,
-      visitingTeamIcon: "sevilla.png",
-      visitingTeamName: "sevilla",
-      visitingValue: false,
-      choice: UNSELECTED_SIGN,
-    },   
+    },
+      
   ];
   const [games, setGame] = useState(data);
-  const poolSize = games.filter((game) => game.id !== undefined).length;//games.length;
+  const poolSize = games.length;
   const poolArray = Array(poolSize).fill(UNSELECTED_SIGN);
   const [completedPools, setCompletedPools] = useState([]);
   const [showAddButton, setShowAddButton] = useState(false);
@@ -210,11 +198,11 @@ const App = (props) => {
         game.id === id &&
         !game.localValue &&
         !game.drawValue &&
-        !game.visitingValue 
+        !game.visitingValue
           ? (game.choice = UNSELECTED_SIGN)
           : game.choice
       )
-      );
+    );
     // setGame(
     //   games.map((game) =>
     //     game.id === id &&
@@ -397,7 +385,7 @@ const App = (props) => {
   return (
     <div className="wrapper">
       <Header title={mainTitle} subtitle={subTitle} notice={noticeCloseDate} />
-      <Table onToggle={toggleChoice} games={games} note={noteExtraGames} />
+      <Table onToggle={toggleChoice} games={games} />
       <CurrentPool poolText={poolSelection} count={countDoubleTriple} />
       <SectionButtons
         addPool={addPool}
