@@ -8,8 +8,8 @@ import ToggleButton from "./components/ToggleButton";
 
 const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
-  const subTitle = "Liga MX J2";
-  const noticeCloseDate = "Cierre: viernes 13 de Enero 15:30 HRS";
+  const subTitle = "Liga MX J5";
+  const noticeCloseDate = "Cierre: viernes 3 de Febrero 2:30 PM";
   const noteExtraGames = "Partido extra en caso de alguna suspensión";
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
