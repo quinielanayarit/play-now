@@ -107,7 +107,7 @@ const App = (props) => {
       localTeamName: "barcelona",
       drawValue: false,
       visitingTeamIcon: "realmadrid.png",
-      visitingTeamName: "realmadrid",
+      visitingTeamName: "real madrid",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
