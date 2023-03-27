@@ -8,8 +8,13 @@ import ToggleButton from "./components/ToggleButton";
 
 const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
+<<<<<<< HEAD
   const subTitle = "Clásicos Internacionales";
   const noticeCloseDate = "Cierre: viernes 31 de Marzo 14:00 HRS";
+=======
+  const subTitle = "FECHA FIFA";
+  const noticeCloseDate = "Cierre: viernes 24 de Marzo 12:00 HRS (MEDIO DÍA)";
+>>>>>>> 6846a6d3623c597178734683dd0b82cfacfd380c
   const noteExtraGames = "Partido extra en caso de superar 5 ganadores o de alguna suspensión";
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
