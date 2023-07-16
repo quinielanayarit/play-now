@@ -39,8 +39,8 @@ const App = (props) => {
       localTeamIcon: "austin.png",
       localTeamName: "ausin",
       drawValue: false,
-      visitingTeamIcon: "mazatlan.png",
-      visitingTeamName: "mazatlán",
+      visitingTeamIcon: "juarez.png",
+      visitingTeamName: "juárez",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
@@ -100,7 +100,6 @@ const App = (props) => {
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
-    
     {
       id: 8,
       localValue: false,
@@ -122,7 +121,7 @@ const App = (props) => {
       visitingTeamName: "minessota",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
-    },   
+    },
     {
       id: 10,
       type: "extra",
