@@ -73,7 +73,7 @@ const App = (props) => {
       localTeamIcon: "munited.png",
       localTeamName: "man united",
       drawValue: false,
-      visitingTeamIcon: "dortmund.png",
+      visitingTeamIcon: "bdortmund.png",
       visitingTeamName: "borussia dortmund",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
