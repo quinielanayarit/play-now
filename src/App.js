@@ -8,8 +8,13 @@ import ToggleButton from "./components/ToggleButton";
 
 const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
+<<<<<<< HEAD
   const subTitle = "LEAGUES CUP 3";
   const noticeCloseDate = "Cierre: viernes 4 de Agosto 1:00 PM";
+=======
+  const subTitle = "JORNADA LEAGUES CUP 2";
+  const noticeCloseDate = "Cierre: Sábado 29 de Julio 12:00 PM (MEDIO DÍA)";
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
   const noteExtraGames = "Partido extra en caso de superar 5 ganadores o de alguna suspensión";
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
@@ -25,6 +30,7 @@ const App = (props) => {
     {
       id: 1,
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "tigres.png",
       localTeamName: "tigres",
       drawValue: false,
@@ -41,17 +47,43 @@ const App = (props) => {
       drawValue: false,
       visitingTeamIcon: "portland.png",
       visitingTeamName: "portland",
+=======
+      localTeamIcon: "realmadrid.png",
+      localTeamName: "real madrid",
+      drawValue: false,
+      visitingTeamIcon: "barcelona.png",
+      visitingTeamName: "barcelona",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
       {
+      id: 2,
+      localValue: false,
+      localTeamIcon: "cruzazul.png",
+      localTeamName: "cruz azul",
+      drawValue: false,
+      visitingTeamIcon: "atlanta.png",
+      visitingTeamName: "atlanta",
+      visitingValue: false,
+      choice: UNSELECTED_SIGN,
+    },
+    {
       id: 3,
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "chicagofire.png",
       localTeamName: "chicago fire",
       drawValue: false,
       visitingTeamIcon: "america.png",
       visitingTeamName: "américa",
+=======
+      localTeamIcon: "santos.png",
+      localTeamName: "santos",
+      drawValue: false,
+      visitingTeamIcon: "orlando.png",
+      visitingTeamName: "orlando",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
@@ -59,66 +91,114 @@ const App = (props) => {
       id: 4,
       localValue: false,
 
+<<<<<<< HEAD
       localTeamIcon: "toluca.png",
       localTeamName: "toluca",
       drawValue: false,
       visitingTeamIcon: "kansascity.png",
       visitingTeamName: "kansas city",
+=======
+      localTeamIcon: "chelsea.png",
+      localTeamName: "chelsea",
+      drawValue: false,
+      visitingTeamIcon: "fulham.png",
+      visitingTeamName: "fulham",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 5,
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "atletico.png",
       localTeamName: "atlético madrid",
       drawValue: false,
       visitingTeamIcon: "sevilla.png",
       visitingTeamName: "sevilla",
+=======
+      localTeamIcon: "munited.png",
+      localTeamName: "man united",
+      drawValue: false,
+      visitingTeamIcon: "bdortmund.png",
+      visitingTeamName: "borussia dortmund",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 6,
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "chivas.png",
       localTeamName: "chivas fem.",
       drawValue: false,
       visitingTeamIcon: "tigres.png",
       visitingTeamName: "tigres fem.",
+=======
+      localTeamIcon: "mty.png",
+      localTeamName: "monterrey",
+      drawValue: false,
+      visitingTeamIcon: "seattle.png",
+      visitingTeamName: "seattle sunders",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 7,
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "arsenal.png",
       localTeamName: "arsenal",
       drawValue: false,
       visitingTeamIcon: "mcity.png",
       visitingTeamName: "man city",
+=======
+      localTeamIcon: "america.png",
+      localTeamName: "américa",
+      drawValue: false,
+      visitingTeamIcon: "columbus.png",
+      visitingTeamName: "columbus",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 8,
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "bdortmund.png",
       localTeamName: "dortmund",
       drawValue: false,
       visitingTeamIcon: "ajax.png",
       visitingTeamName: "ajax",
+=======
+      localTeamIcon: "toluca.png",
+      localTeamName: "toluca",
+      drawValue: false,
+      visitingTeamIcon: "colorado.png",
+      visitingTeamName: "colorado rapids",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
     {
       id: 9,
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "lapaz.png",
       localTeamName: "la paz",
       drawValue: false,
       visitingTeamIcon: "tapatio.png",
       visitingTeamName: "tapatío",
+=======
+      localTeamIcon: "chivas.png",
+      localTeamName: "chivas",
+      drawValue: false,
+      visitingTeamIcon: "kansascity.png",
+      visitingTeamName: "kansas city",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
@@ -126,11 +206,19 @@ const App = (props) => {
       id: 10,
       type: "extra",
       localValue: false,
+<<<<<<< HEAD
       localTeamIcon: "munited.png",
       localTeamName: "man united",
       drawValue: false,
       visitingTeamIcon: "athleticb.png",
       visitingTeamName: "athletic",
+=======
+      localTeamIcon: "atleticom.png",
+      localTeamName: "atlético madrid",
+      drawValue: false,
+      visitingTeamIcon: "mcity.png",
+      visitingTeamName: "man city",
+>>>>>>> 753b703ce723ae5f6acd6993a353eff8ef5ccebb
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },   
