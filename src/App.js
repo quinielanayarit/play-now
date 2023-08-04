@@ -44,17 +44,6 @@ const App = (props) => {
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
-      {
-      id: 2,
-      localValue: false,
-      localTeamIcon: "cruzazul.png",
-      localTeamName: "cruz azul",
-      drawValue: false,
-      visitingTeamIcon: "atlanta.png",
-      visitingTeamName: "atlanta",
-      visitingValue: false,
-      choice: UNSELECTED_SIGN,
-    },
     {
       id: 3,
       localValue: false,
@@ -69,7 +58,6 @@ const App = (props) => {
         {
       id: 4,
       localValue: false,
-
       localTeamIcon: "toluca.png",
       localTeamName: "toluca",
       drawValue: false,
