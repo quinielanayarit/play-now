@@ -106,7 +106,7 @@ const App = (props) => {
       localTeamName: "méxico",
       drawValue: false,
       visitingTeamIcon: "aus.png",
-      visitingTeamName: "aus  ",
+      visitingTeamName: "australia",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
