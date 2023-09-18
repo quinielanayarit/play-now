@@ -123,6 +123,7 @@ const App = (props) => {
     },
     {
       id: 10,
+      type: "extra",
       localValue: false,
       localTeamIcon: "cruzazul.png",
       localTeamName: "cruz azul",
