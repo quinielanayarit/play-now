@@ -8,9 +8,9 @@ import ToggleButton from "./components/ToggleButton";
 
 const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
-  const subTitle = "JORNADA 13";
-  const noticeCloseDate = "Cierre: VIERNES 20 de Octubre 2:00 PM";
-  const noteExtraGames = "Partido extra en caso de superar 5 ganadores o de alguna suspensión";
+  const subTitle = "Liga MX J2";
+  const noticeCloseDate = "Cierre: viernes 20 de octubre 2:00 PM";
+  const noteExtraGames = "Partido extra en caso de alguna suspensión";
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
 
