@@ -50,7 +50,7 @@ const App = (props) => {
       localTeamIcon: "usa.png",
       localTeamName: "usa sub 17",
       drawValue: false,
-      visitingTeamIcon: "fran.png",
+      visitingTeamIcon: "fra.png",
       visitingTeamName: "francia sub 17",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
@@ -102,7 +102,7 @@ const App = (props) => {
     {
       id: 8,
       localValue: false,
-      localTeamIcon: "can.png",
+      localTeamIcon: "cancun.png",
       localTeamName: "cancún",
       drawValue: false,
       visitingTeamIcon: "merida.png",
