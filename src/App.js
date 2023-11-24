@@ -51,7 +51,7 @@ const App = (props) => {
       localTeamName: "león",
       drawValue: false,
       visitingTeamIcon: "santos.png",
-      visitingTeamName: "santos/mazatlán",
+      visitingTeamName: "santos",
       visitingValue: false,
       choice: UNSELECTED_SIGN,
     },
