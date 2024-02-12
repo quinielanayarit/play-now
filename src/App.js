@@ -36,7 +36,7 @@ const App = (props) => {
     {
       id: 2,
       localValue: false,
-      localTeamIcon: "mazatlán.png",
+      localTeamIcon: "mazatlan.png",
       localTeamName: "mazatlán",
       drawValue: false,
       visitingTeamIcon: "chivas.png",
