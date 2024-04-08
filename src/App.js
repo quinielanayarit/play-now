@@ -9,7 +9,7 @@ import ToggleButton from "./components/ToggleButton";
 const App = (props) => {
   const mainTitle = "QUINIELA NAYARIT";
   const subTitle = "JORNADA 15";
-  const noticeCloseDate = "Cierre: viernes 5 de Abril 3:30 PM";
+  const noticeCloseDate = "Cierre: viernes 12 de Abril 3:30 PM";
   const noteExtraGames = "Partido extra en caso de alguna suspensión";
 
   document.title = mainTitle + ' - ' + subTitle + ' ⚽';
